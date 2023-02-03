@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:class="color">{{count}}</p>
+        <button v-on:click="countUp">up</button>
+        <button v-on:click="countDown">down</button>
+        <div v-text="count">true!!</div>
+        <div v-if="count > 10">10より大きい</div>
+        <div v-else>10以下</div>
+        <ul>
+            <li v-for="item in items">li 繰り返し {{item}} </li> 
+            <!--
+                v-for="item in items"でitemsの要素をitemに代入して、itemを表示
+                for(const item of items) {
+                    <li>{{item}}</li>のレンダリング
+                }
+                のこと
+            -->
+        </ul>
+        <input type="text" v-model="color">
+        <div :class="color">色が変化します、現在：{{color}}</div>
+        <div :class="customColor">大文字：{{customColor}}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+</body>
+</html>
