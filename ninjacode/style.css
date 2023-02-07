@@ -1,0 +1,9 @@
+.active {
+    width: 30%;
+    margin: 30% auto;
+    padding: 1rem;
+    background:#40B983;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 6px 6px #ddd;
+}
