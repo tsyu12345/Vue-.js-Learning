@@ -17,6 +17,28 @@
             <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink"></circle>
         </svg>
         <input type="range" min="0" max="100" v-model="radius">
+
+        <div id="list-test">
+            <ul>
+                <li v-for="item in items">
+                    {{ item.name }} - {{ item.price }}
+                </li>
+            </ul>
+            <ul id="list-test2">
+                <li v-for="monster in monsters" v-if="monster.hp >= 300" v-bind:class="tuyoi" v-bind:key="monster.id">
+                    {{ monster.name }} - {{ monster.hp}}:つよい！
+                </li>
+            </ul>
+            
+            <input v-model="newMonsterName">
+            <button v-on:click="addMonster">add monster</button>
+            <ul id="list-test3">
+                <li v-for="(monster, index) in monsters" v-bind:key="monster.id">
+                    {{ monster.name }} : {{ monster.hp }}
+                    <button v-on:click="removeMonster(index)">remove this monster</button>
+                    <button v-on:click="attackMonster(index)">attack this monster</button>
+                </li>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
 </body>
