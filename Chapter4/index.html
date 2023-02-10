@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="S-16" v-bind:style="{ border:border }">
+            <p>{{msg}}</p>
+            <p>{{reverseMsg}}</p>
+            <input v-model.number="width" v-bind:style="{border:border}">{{ width }}
+            <input v-model.number="halfWidth" v-bind:style="{border:border}">{{ halfWidth }}
+            <div id="price-list" v-bind:style="{border:border}">
+                <input v-model.number="budget">円以下に絞り込む
+                <input v-model.number="limit">件まで表示
+                <p>{{ matched.length }}件中{{ limited.length }}件表示</p>
+                <ul>
+                    <li v-for="item in limited" v-bind:key="item.id">{{item.name}} : {{item.price}}円</li>
+                </ul>
+            </div>
+        </div>
+        <div id="S-18" v-bind:style="{border:border}">
+            <div>{{ price | numberFormat }}</div>
+            <div v-bind:id="price | numberFormat">
+                <p>{{ price | numberFormat }}</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
