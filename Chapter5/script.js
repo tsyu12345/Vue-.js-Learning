@@ -3,6 +3,19 @@ var myComponent = {
     props: ['myprop']
 }
 
+
+
+Vue.component('my-component2', {
+    template: `
+        <button @click="handleClick">click me</button>
+    `,
+    methods: {
+        handleClick: function() {
+            this.$emit('child-event');
+        }
+    }
+});
+
 function main() {
     
 
@@ -10,7 +23,12 @@ function main() {
     new Vue({
         el: '#app',
         components: {
-            'my-component': myComponent
+            'my-component': myComponent,
+        },
+        methods: {
+            parentMethod: function() {
+                window.alert('child event');
+            }
         }
     });
 }
