@@ -1,0 +1,12 @@
+.hobby-card {
+  width: 50%;
+  padding: 1rem;
+  margin: 1rem auto;
+  color: #ffffff;
+  background: #40b983;
+  box-shadow: 2px 2px 4px #ddd;
+  font-weight: bold;
+}
+.hobby-card:hover {
+  opacity: .8;
+}
