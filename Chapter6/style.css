@@ -1,0 +1,8 @@
+/**透明度を1秒間で変化させる */
+.v-enter-active .v-leave-active{
+    transition: opacity 2s;
+}
+  /**非表示になる時の透明度を定義 */
+.v-enter .v-leave-to{
+    opacity: 0.5;
+}
