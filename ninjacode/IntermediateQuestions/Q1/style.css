@@ -1,0 +1,23 @@
+p {
+  font-size:30px;
+  fo
+}
+
+
+.btnContainer {
+  display: inline-block;
+}
+
+button {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+button.up {
+  background: #40b983;
+  border: none;
+}
+button.down {
+  background: red;
+  border: none;
+}
