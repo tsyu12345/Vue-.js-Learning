@@ -66,5 +66,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "volta": {
+    "node": "19.7.0"
+  }
 }
