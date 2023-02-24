@@ -1,0 +1,14 @@
+{
+  "name": "q5",
+  "version": "1.0.0",
+  "description": "noen",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "tsyu12345",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/cli": "^5.0.8"
+  }
+}
